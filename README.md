@@ -27,19 +27,19 @@ This project presents interactive data visualizations for five different dataset
 
 **Justification:** A stacked area chart is perfect for showing how different categories (genres) contribute to a total over time. This visualization reveals both overall industry trends and shifting genre popularity across decades.
 
-### 4. Grocery Store Survey Dataset - Grouped Bar Chart
+### 4. Grocery Store Survey Dataset - Bubble Chart
 **File:** `grocerystoresurvey.csv`
-**Visualization Type:** Demographic Analysis Bar Chart
-**Description:** Analyzes average purchase amounts across age groups and store chains, providing consumer spending behavior insights.
+**Visualization Type:** Bubble Chart
+**Description:** Visualizes individual customers as bubbles, with age on the x-axis, purchase amount on the y-axis, bubble size representing family size, and color representing store chain.
 
-**Justification:** The grouped bar chart enables comparison of spending patterns across multiple dimensions (age groups and store chains). This multi-dimensional analysis reveals valuable market insights about customer demographics and retail chain positioning.
+**Justification:** A bubble chart allows for multi-dimensional analysis of individual customer behavior, revealing patterns in age, spending, family size, and store preference. This approach provides a more granular and insightful view than aggregated bar charts.
 
-### 5. Mutual Funds Dataset - Interactive Pie Chart
+### 5. Mutual Funds Dataset - Pie Chart with Outside Labels and Color Legend
 **File:** `mutualfunds.csv`
-**Visualization Type:** Interactive Pie Chart with Performance Metrics
-**Description:** Displays asset allocation across mutual fund categories with detailed performance information on hover.
+**Visualization Type:** Pie Chart with Outside Labels and Color Legend
+**Description:** Displays asset allocation across mutual fund categories. All category labels are outside the pie, connected with leader lines, and a color legend is provided for clarity. Interactive tooltips show detailed performance metrics on hover.
 
-**Justification:** A pie chart clearly shows proportional relationships and asset allocation percentages. The interactive tooltips provide detailed performance metrics, making it ideal for investment decision-making by showing both allocation and historical returns.
+**Justification:** The improved pie chart ensures all labels are readable and categories are clearly explained, making it ideal for showing proportional relationships. Leader lines and a color legend enhance clarity and accessibility.
 
 ## Technical Implementation
 
@@ -97,14 +97,16 @@ This project presents interactive data visualizations for five different dataset
 - Handles sparse data years with zero values
 
 ### Grocery Store Survey Dataset
-- Creates age group categories from individual ages
-- Calculates average purchase amounts by demographics
+- Uses individual customer data points (not just aggregated groups)
+- Plots age, purchase amount, family size, and store chain for each customer
 - Filters out invalid numeric entries
 
 ### Mutual Funds Dataset
 - Excludes the "Grand Total" summary row
 - Processes performance metrics for multiple time periods
 - Calculates percentage allocations for pie chart
+- All labels are placed outside the pie with leader lines
+- A color legend is provided for all categories
 
 ## Browser Compatibility
 - Chrome 60+
